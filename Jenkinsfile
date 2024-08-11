@@ -6,7 +6,7 @@ PYTHON_ENV = 'development'
 stages {
 stage('Checkout') {
 steps {
-git branch: "${env.BRANCH_NAME}", url: 'https://github.com/sashakuksa/flask'
+git branch: 'main', url: 'https://github.com/sashakuksa/flask'
 }
 }
 stage('Setup Python') {
@@ -38,7 +38,7 @@ archiveArtifacts artifacts: 'reports/**', allowEmptyArchive: true
 }
 stage('Deploy') {
 when {
-branch 'master'
+branch 'main'
 }
 environment {
 PYTHON_ENV = 'production'
