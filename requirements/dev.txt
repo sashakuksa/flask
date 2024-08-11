@@ -46,6 +46,7 @@ docutils==0.20.1
     #   sphinx
     #   sphinx-tabs
 filelock==3.13.3
+flask==2.3.2
     # via
     #   tox
     #   virtualenv
